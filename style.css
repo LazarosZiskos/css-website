@@ -433,6 +433,7 @@ nav a:hover {
     height: 80px;
     animation: 
     bounce 2s ease-in-out infinite;
+    margin-top: -60px
 }
 
 .scroll-btn {
