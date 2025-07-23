@@ -15,9 +15,8 @@
     scroll-behavior: smooth;
 }
 
-a {
-    text-decoration: none;
-    
+ul {
+    list-style-type: none;    
 }
 
 h1 {
@@ -36,6 +35,35 @@ h2 {
 
 h3 {
     font-size: 24px;
+}
+
+li {
+    text-decoration: none;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* at original position */
+  }
+  50% {
+    transform: translateY(-10px); /* move up */
+  }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) ;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .container {
@@ -92,16 +120,6 @@ nav a:hover {
     min-height: 100vh;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px) ;
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 .hero {
     display: flex;
@@ -389,3 +407,89 @@ nav a:hover {
     width: 350px;
     height: 100%;
 }
+
+.services-right {
+    display: flex;
+    flex: 1;
+    margin-left: 20px;
+}
+
+.services-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: 1.5sec;
+    padding-top: 150px
+}
+
+.scroll-btn-wrapper{
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    animation: 
+    bounce 2s ease-in-out infinite;
+    margin-top: -20px;
+}
+
+.scroll-btn {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    filter: invert();
+}
+
+.services-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom:3rem;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+}
+
+.services-info-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap:2rem;
+    flex:1;
+    width: 1/2;
+}
+
+.services-subtext {
+    color:gray;
+    width: 400px
+}
+
+.service-list-item {
+    display: flex;
+    gap:1rem;
+    align-items: center;
+}
+
+.services-image {
+    display: flex;
+    flex:1
+}
+
+.services-wrapper-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom:3rem;
+}
+
